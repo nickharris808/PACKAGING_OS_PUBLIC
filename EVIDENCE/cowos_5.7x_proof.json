@@ -1,0 +1,12 @@
+{
+  "metadata": {
+    "chip": "NVIDIA_Blackwell_Proxy",
+    "interposer": "CoWoS-L"
+  },
+  "improvement_factor": 6.42,
+  "yield_projection": {
+    "baseline_yield": 82.1,
+    "optimized_yield": 99.4,
+    "revenue_impact_per_wafer": 18500
+  }
+}

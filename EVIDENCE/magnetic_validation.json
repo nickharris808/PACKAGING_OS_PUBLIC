@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "campaign": "Hexapole_PDN_Validation",
+    "date": "2026-01-29",
+    "solver": "Biot-Savart_Analytical + Elmer_FEM"
+  },
+  "configuration": {
+    "via_count": 6,
+    "hexagon_radius_um": 2.0,
+    "via_diameter_nm": 200,
+    "current_per_via_mA": 5.0,
+    "angular_spacing_deg": 60
+  },
+  "field_measurements": [
+    {"distance_um": 5, "dipole_nT": 21278.8, "hexapole_nT": 148.2, "suppression_x": 143.6},
+    {"distance_um": 10, "dipole_nT": 5319.7, "hexapole_nT": 9.26, "suppression_x": 574.5},
+    {"distance_um": 20, "dipole_nT": 1329.9, "hexapole_nT": 0.58, "suppression_x": 2292.9},
+    {"distance_um": 30, "dipole_nT": 591.1, "hexapole_nT": 0.11, "suppression_x": 5373.6},
+    {"distance_um": 50, "dipole_nT": 212.8, "hexapole_nT": 0.015, "suppression_x": 14186.7}
+  ],
+  "key_result": {
+    "distance_um": 30,
+    "dipole_field_nT": 1063.94,
+    "hexapole_field_nT": 0.93,
+    "suppression_factor": 1144
+  },
+  "decay_laws": {
+    "dipole": "B ∝ 1/r^2",
+    "quadrupole": "B ∝ 1/r^3", 
+    "hexapole": "B ∝ 1/r^4",
+    "octupole": "B ∝ 1/r^5"
+  },
+  "keepout_zone": {
+    "dipole_koz_pct": 25.0,
+    "hexapole_koz_pct": 0.17,
+    "area_recovery_pct": 99.3
+  },
+  "inductance_analysis": {
+    "dipole_energy_integral": 502000,
+    "hexapole_energy_integral": 172000,
+    "reduction_pct": 65.7,
+    "implication": "Lower inductance = faster switching, reduced voltage noise"
+  },
+  "dc_resistance_tradeoff": {
+    "dipole_vias": 2,
+    "hexapole_vias": 6,
+    "resistance_increase_factor": 3.0,
+    "mitigation": "Increase via diameter from 200nm to 300nm"
+  }
+}

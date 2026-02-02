@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "campaign": "Geometry_Exclusivity_Verification",
+    "date": "2026-01-28",
+    "solver": "CalculiX_2.22"
+  },
+  "summary": {
+    "total_cases": 30,
+    "geometry_type": "Rectangular_Panel_510x515mm",
+    "conclusion": "Azimuthal modulation effectiveness < 0.1%"
+  },
+  "cases": [
+    {
+      "case_id": "RECT_SIM_001",
+      "warpage_baseline_um": 255.58,
+      "warpage_azimuthal_um": 256.68,
+      "warpage_cartesian_um": 37.22,
+      "azimuthal_impact_pct": -0.4304
+    },
+    {
+      "case_id": "RECT_SIM_002",
+      "warpage_baseline_um": 243.4,
+      "warpage_azimuthal_um": 243.92,
+      "warpage_cartesian_um": 39.63,
+      "azimuthal_impact_pct": -0.2117
+    },
+    {
+      "case_id": "RECT_SIM_003",
+      "warpage_baseline_um": 242.46,
+      "warpage_azimuthal_um": 241.87,
+      "warpage_cartesian_um": 37.78,
+      "azimuthal_impact_pct": 0.2455
+    },
+    {
+      "case_id": "RECT_SIM_004",
+      "warpage_baseline_um": 242.47,
+      "warpage_azimuthal_um": 241.7,
+      "warpage_cartesian_um": 35.25,
+      "azimuthal_impact_pct": 0.3186
+    },
+    {
+      "case_id": "RECT_SIM_005",
+      "warpage_baseline_um": 241.45,
+      "warpage_azimuthal_um": 240.34,
+      "warpage_cartesian_um": 39.4,
+      "azimuthal_impact_pct": 0.463
+    },
+    {
+      "case_id": "RECT_SIM_006",
+      "warpage_baseline_um": 258.81,
+      "warpage_azimuthal_um": 258.41,
+      "warpage_cartesian_um": 38.5,
+      "azimuthal_impact_pct": 0.1569
+    },
+    {
+      "case_id": "RECT_SIM_007",
+      "warpage_baseline_um": 251.56,
+      "warpage_azimuthal_um": 250.91,
+      "warpage_cartesian_um": 39.17,
+      "azimuthal_impact_pct": 0.2589
+    },
+    {
+      "case_id": "RECT_SIM_008",
+      "warpage_baseline_um": 240.85,
+      "warpage_azimuthal_um": 241.57,
+      "warpage_cartesian_um": 36.0,
+      "azimuthal_impact_pct": -0.3012
+    },
+    {
+      "case_id": "RECT_SIM_009",
+      "warpage_baseline_um": 248.05,
+      "warpage_azimuthal_um": 247.6,
+      "warpage_cartesian_um": 35.62,
+      "azimuthal_impact_pct": 0.1811
+    },
+    {
+      "case_id": "RECT_SIM_010",
+      "warpage_baseline_um": 247.59,
+      "warpage_azimuthal_um": 247.65,
+      "warpage_cartesian_um": 41.13,
+      "azimuthal_impact_pct": -0.0217
+    },
+    {
+      "case_id": "RECT_SIM_011",
+      "warpage_baseline_um": 241.94,
+      "warpage_azimuthal_um": 241.67,
+      "warpage_cartesian_um": 36.86,
+      "azimuthal_impact_pct": 0.1142
+    },
+    {
+      "case_id": "RECT_SIM_012",
+      "warpage_baseline_um": 251.39,
+      "warpage_azimuthal_um": 250.73,
+      "warpage_cartesian_um": 39.3,
+      "azimuthal_impact_pct": 0.2598
+    },
+    {
+      "case_id": "RECT_SIM_013",
+      "warpage_baseline_um": 255.33,
+      "warpage_azimuthal_um": 254.76,
+      "warpage_cartesian_um": 38.49,
+      "azimuthal_impact_pct": 0.2237
+    },
+    {
+      "case_id": "RECT_SIM_014",
+      "warpage_baseline_um": 251.97,
+      "warpage_azimuthal_um": 252.72,
+      "warpage_cartesian_um": 38.6,
+      "azimuthal_impact_pct": -0.2972
+    },
+    {
+      "case_id": "RECT_SIM_015",
+      "warpage_baseline_um": 242.31,
+      "warpage_azimuthal_um": 242.24,
+      "warpage_cartesian_um": 36.68,
+      "azimuthal_impact_pct": 0.0297
+    },
+    {
+      "case_id": "RECT_SIM_016",
+      "warpage_baseline_um": 242.88,
+      "warpage_azimuthal_um": 241.8,
+      "warpage_cartesian_um": 38.73,
+      "azimuthal_impact_pct": 0.4477
+    },
+    {
+      "case_id": "RECT_SIM_017",
+      "warpage_baseline_um": 254.29,
+      "warpage_azimuthal_um": 254.05,
+      "warpage_cartesian_um": 41.18,
+      "azimuthal_impact_pct": 0.0917
+    },
+    {
+      "case_id": "RECT_SIM_018",
+      "warpage_baseline_um": 247.31,
+      "warpage_azimuthal_um": 247.58,
+      "warpage_cartesian_um": 35.74,
+      "azimuthal_impact_pct": -0.1082
+    },
+    {
+      "case_id": "RECT_SIM_019",
+      "warpage_baseline_um": 255.27,
+      "warpage_azimuthal_um": 254.19,
+      "warpage_cartesian_um": 38.74,
+      "azimuthal_impact_pct": 0.4255
+    },
+    {
+      "case_id": "RECT_SIM_020",
+      "warpage_baseline_um": 250.7,
+      "warpage_azimuthal_um": 250.26,
+      "warpage_cartesian_um": 37.83,
+      "azimuthal_impact_pct": 0.1754
+    },
+    {
+      "case_id": "RECT_SIM_021",
+      "warpage_baseline_um": 255.3,
+      "warpage_azimuthal_um": 254.05,
+      "warpage_cartesian_um": 39.51,
+      "azimuthal_impact_pct": 0.4919
+    },
+    {
+      "case_id": "RECT_SIM_022",
+      "warpage_baseline_um": 247.49,
+      "warpage_azimuthal_um": 246.27,
+      "warpage_cartesian_um": 36.52,
+      "azimuthal_impact_pct": 0.4929
+    },
+    {
+      "case_id": "RECT_SIM_023",
+      "warpage_baseline_um": 241.24,
+      "warpage_azimuthal_um": 241.67,
+      "warpage_cartesian_um": 36.98,
+      "azimuthal_impact_pct": -0.1773
+    },
+    {
+      "case_id": "RECT_SIM_024",
+      "warpage_baseline_um": 243.02,
+      "warpage_azimuthal_um": 243.02,
+      "warpage_cartesian_um": 36.91,
+      "azimuthal_impact_pct": -0.0003
+    },
+    {
+      "case_id": "RECT_SIM_025",
+      "warpage_baseline_um": 249.06,
+      "warpage_azimuthal_um": 249.74,
+      "warpage_cartesian_um": 39.3,
+      "azimuthal_impact_pct": -0.2728
+    },
+    {
+      "case_id": "RECT_SIM_026",
+      "warpage_baseline_um": 257.25,
+      "warpage_azimuthal_um": 257.64,
+      "warpage_cartesian_um": 40.45,
+      "azimuthal_impact_pct": -0.1508
+    },
+    {
+      "case_id": "RECT_SIM_027",
+      "warpage_baseline_um": 243.05,
+      "warpage_azimuthal_um": 242.42,
+      "warpage_cartesian_um": 37.18,
+      "azimuthal_impact_pct": 0.261
+    },
+    {
+      "case_id": "RECT_SIM_028",
+      "warpage_baseline_um": 251.28,
+      "warpage_azimuthal_um": 252.04,
+      "warpage_cartesian_um": 37.51,
+      "azimuthal_impact_pct": -0.305
+    },
+    {
+      "case_id": "RECT_SIM_029",
+      "warpage_baseline_um": 253.64,
+      "warpage_azimuthal_um": 254.23,
+      "warpage_cartesian_um": 39.89,
+      "azimuthal_impact_pct": -0.2324
+    },
+    {
+      "case_id": "RECT_SIM_030",
+      "warpage_baseline_um": 253.17,
+      "warpage_azimuthal_um": 252.08,
+      "warpage_cartesian_um": 38.68,
+      "azimuthal_impact_pct": 0.4301
+    }
+  ]
+}

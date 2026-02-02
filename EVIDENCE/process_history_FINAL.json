@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "campaign": "Viscoelastic_Process_History",
+    "material": "Namics_U8410"
+  },
+  "summary": {
+    "hidden_stress_magnitude_um": 2838.57,
+    "error_factor": "1898x"
+  },
+  "time_steps": [
+    {
+      "step": "Die_Attach",
+      "temp_c": 260,
+      "stress_cum_mpa": 22.3
+    },
+    {
+      "step": "Underfill_Cure",
+      "temp_c": 165,
+      "stress_cum_mpa": 13.3
+    },
+    {
+      "step": "Cool_Down_Glassy",
+      "temp_c": 100,
+      "stress_cum_mpa": 45.1
+    },
+    {
+      "step": "Cool_Down_Room",
+      "temp_c": 25,
+      "stress_cum_mpa": 82.4
+    }
+  ]
+}

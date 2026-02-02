@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "campaign": "Stiffness_Sensitivity_Analysis",
+    "date": "2026-01-28",
+    "substrate": "510x515mm_Rectangular_Panel"
+  },
+  "azimuthal_control": {
+    "method": "k(theta) = k0 * (1 + k_azi * cos(n*theta))",
+    "warpage_range_um": [240.34, 256.68],
+    "variance_um2": 23.7,
+    "effectiveness_pct": 0.31
+  },
+  "cartesian_control": {
+    "method": "K(x,y) = K_min + (K_max - K_min) * |nabla^2 M_T| / max(|nabla^2 M_T|)",
+    "warpage_range_um": [35.25, 41.18],
+    "variance_um2": 2.89,
+    "effectiveness_pct": 84.7
+  },
+  "variance_ratio": 8.2,
+  "sensitivity_amplification": {
+    "silicon_baseline": 1.0,
+    "glass_factor": 45.7,
+    "combined_variance_explosion": 375.7
+  },
+  "conclusion": "Azimuthal methods produce 8.2x higher variance than Cartesian on rectangular substrates. Combined with 45.7x glass sensitivity, total variance explosion is 375x."
+}

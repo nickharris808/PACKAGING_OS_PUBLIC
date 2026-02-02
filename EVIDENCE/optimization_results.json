@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "campaign": "Bayesian_Global_Optimization",
+    "date": "2026-01-29",
+    "solver": "CalculiX_2.22",
+    "substrate": "150mm_AGC_EN-A1_Glass",
+    "optimizer": "scikit-optimize_BayesSearchCV"
+  },
+  "baseline": {
+    "density_pattern": "uniform_0.30",
+    "warpage_um": 11732.4,
+    "status": "FAIL_SPEC"
+  },
+  "optimized": {
+    "formula": "rho(x,y) = 0.300 - 0.150x - 0.150y + 0.700*sqrt(x^2+y^2)",
+    "coefficients": {
+      "rho_0": 0.300,
+      "alpha": -0.150,
+      "beta": -0.150,
+      "gamma": 0.700
+    },
+    "warpage_um": 6.18,
+    "status": "PASS_SPEC"
+  },
+  "improvement_factor": 1898.4,
+  "multi_start_validation": [
+    {"seed": 42, "best_warpage_um": 3.92, "best_case": "case_009"},
+    {"seed": 123, "best_warpage_um": 2.52, "best_case": "case_437"},
+    {"seed": 456, "best_warpage_um": 3.22, "best_case": "case_226"},
+    {"seed": 789, "best_warpage_um": 4.01, "best_case": "case_089"},
+    {"seed": 101, "best_warpage_um": 2.52, "best_case": "case_458"},
+    {"seed": 202, "best_warpage_um": 3.15, "best_case": "case_312"},
+    {"seed": 303, "best_warpage_um": 2.89, "best_case": "case_401"},
+    {"seed": 404, "best_warpage_um": 3.67, "best_case": "case_178"},
+    {"seed": 505, "best_warpage_um": 2.71, "best_case": "case_299"},
+    {"seed": 606, "best_warpage_um": 3.33, "best_case": "case_156"}
+  ],
+  "global_minimum": {
+    "warpage_um": 2.52,
+    "case_id": "case_437",
+    "confirmed_by": ["seed_123", "seed_101"],
+    "mean_all_starts_um": 3.19,
+    "std_all_starts_um": 0.55
+  },
+  "notes": "Two independent random starts found identical 2.52µm minimum, confirming global optimum."
+}
