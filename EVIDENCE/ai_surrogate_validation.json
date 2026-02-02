@@ -1,29 +1,16 @@
 {
   "metadata": {
     "campaign": "AI_Surrogate_Cross_Validation",
-    "date": "2026-01-30",
-    "model": "GradientBoostingRegressor",
-    "library": "scikit-learn_1.3.0"
+    "date": "2026-01-30"
   },
   "training_data": {
-    "clpt_simulations": 3508,
-    "fem_validations": 500,
     "total_samples": 4008,
     "feature_count": 8,
-    "features": ["rho_0", "alpha", "beta", "gamma", "thickness", "E_glass", "T_reflow", "panel_size"]
-  },
-  "hyperparameters": {
-    "n_estimators": 500,
-    "learning_rate": 0.03,
-    "max_depth": 4,
-    "subsample": 0.7,
-    "reg_alpha": 0.1,
-    "reg_lambda": 1.0
+    "features": "PROPRIETARY — Available under NDA"
   },
   "performance": {
     "train_r2": 0.98,
     "test_r2": 0.92,
-    "test_rmse_um": 847,
     "cross_validation": {
       "folds": 5,
       "mean_r2": 0.91,
@@ -32,17 +19,11 @@
   },
   "inference": {
     "single_prediction_ms": 0.8,
-    "throughput_per_second": 1250,
-    "batch_size_optimal": 100
+    "throughput_per_second": 1250
   },
   "comparison_to_fem": {
     "fem_runtime_per_case_min": 30,
-    "surrogate_runtime_per_case_ms": 0.8,
     "speedup_factor": 2250000
   },
-  "safety_interlock": {
-    "threshold_pass_probability": 0.99,
-    "margin_required_um": 0.0,
-    "action_on_fail": "ABORT_GDSII_GENERATION"
-  }
+  "notes": "Model architecture and hyperparameters available in private data room under NDA."
 }

@@ -97,7 +97,7 @@ Standard FEM predicts 1.5 µm. Reality is **2,838 µm**. You're shipping designs
 | Azimuthal | 248.0 µm | ±0.3% |
 | **Cartesian** | **38.0 µm** | **6.5×** |
 
-### Dense Edge Formula = 2.52 µm Achieved
+### Proprietary Optimization = 2.52 µm Achieved
 
 **Source:** `EVIDENCE/optimization_results.json`
 
@@ -106,11 +106,12 @@ Standard FEM predicts 1.5 µm. Reality is **2,838 µm**. You're shipping designs
   "baseline_warpage_um": 11732.4,
   "optimized_warpage_um": 6.18,
   "global_minimum_um": 2.52,
-  "improvement_factor": 1898.4
+  "improvement_factor": 1898.4,
+  "method": "PROPRIETARY — Available under NDA"
 }
 ```
 
-![Dense Edge](FIGURES/fig3_dense_edge_gradient.png)
+![Optimization Result](FIGURES/fig3_dense_edge_gradient.png)
 
 ### CoWoS Validation = 82.1% → 99.4% Yield
 
