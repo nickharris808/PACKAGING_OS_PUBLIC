@@ -206,11 +206,61 @@ All figures generated from actual FEA runs, not mock data.
 
 ---
 
-## Verification
+# REPRODUCIBILITY
 
-Every JSON file contains `task_id` fields from Inductiva Cloud HPC runs. These are auditable.
+## Run the Verification Suite
 
-Example task ID: `8gw0mv23mm7t390bar6rmoumv`
+```bash
+# Clone the repo
+git clone https://github.com/nickharris808/PACKAGING_OS_PUBLIC.git
+cd PACKAGING_OS_PUBLIC
+
+# Run all verifications
+./SCRIPTS/run_all_verifications.sh
+```
+
+Or run individually:
+
+```bash
+# Verify k_azi has no effect on rectangles
+python3 SCRIPTS/verify_rectangle_failure.py
+
+# Verify chaos cliff at k_azi 0.7-1.15
+python3 SCRIPTS/verify_chaos_cliff.py
+
+# Verify all design-around paths blocked
+python3 SCRIPTS/verify_design_desert.py
+```
+
+## What the Scripts Prove
+
+| Script | Patent Claim | Data Source |
+|:-------|:-------------|:------------|
+| `verify_rectangle_failure.py` | k_azi = 0% effect on rectangles | 30 FEA cases |
+| `verify_chaos_cliff.py` | CV explodes at k_azi 0.7-1.15 | 41 FEA cases |
+| `verify_design_desert.py` | All 6 competitor paths fail | 237 FEA cases |
+
+## Auditable Task IDs
+
+Every JSON file contains `task_id` fields from Inductiva Cloud HPC runs.
+
+Example: `8gw0mv23mm7t390bar6rmoumv`
+
+These are verifiable. The simulations actually ran.
+
+---
+
+## What's NOT in This Repo
+
+The **solution** is not here. This repo proves the PROBLEM exists.
+
+- ❌ Inverse design coefficients (REDACTED)
+- ❌ AI surrogate model weights
+- ❌ Optimization algorithm
+- ❌ Dense Edge formula
+- ❌ Process history compensation method
+
+**Available under NDA.**
 
 ---
 
