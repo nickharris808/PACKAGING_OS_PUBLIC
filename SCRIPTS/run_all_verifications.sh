@@ -1,57 +1,91 @@
 #!/bin/bash
+# =============================================================================
+# GENESIS PLATFORM — Run All Verification Scripts
+# =============================================================================
 #
-# REPRODUCIBILITY SUITE — Run all verification scripts
+# This script executes all four verification scripts in sequence.
+# Requirements: Python 3.x, numpy
 #
-# This script runs all verification checks to prove the patent claims.
-# Scripts 1-3 parse real FEA data. Script 4 computes physics from first principles.
+# Usage:
+#   chmod +x run_all_verifications.sh
+#   ./run_all_verifications.sh
 #
-# Usage: ./run_all_verifications.sh
-#
+# =============================================================================
 
 set -e
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo ""
-echo "╔══════════════════════════════════════════════════════════════════════╗"
-echo "║            GENESIS PLATFORM — FULL VERIFICATION SUITE                ║"
-echo "║                                                                       ║"
-echo "║  4 verifications: 3 data-driven + 1 physics computation              ║"
-echo "╚══════════════════════════════════════════════════════════════════════╝"
+echo "============================================================"
+echo "  GENESIS PLATFORM — FULL VERIFICATION SUITE"
+echo "============================================================"
+echo ""
+echo "  Running 4 verification scripts..."
+echo "  Each loads real FEA data from EVIDENCE/ and performs"
+echo "  independent analysis."
 echo ""
 
-echo "Running verification 1/4: Rectangle Failure (30 FEA cases)..."
-echo "─────────────────────────────────────────────────────────────────────────"
-python3 "$SCRIPT_DIR/verify_rectangle_failure.py"
+# Track pass/fail
+PASS=0
+FAIL=0
+
+# --- Script 1: Rectangle Failure ---
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  [1/4] verify_rectangle_failure.py"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+if python3 "$SCRIPT_DIR/verify_rectangle_failure.py"; then
+    PASS=$((PASS + 1))
+else
+    FAIL=$((FAIL + 1))
+fi
+
+# --- Script 2: k_azi Sweep ---
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  [2/4] verify_kazi_sweep.py"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+if python3 "$SCRIPT_DIR/verify_kazi_sweep.py"; then
+    PASS=$((PASS + 1))
+else
+    FAIL=$((FAIL + 1))
+fi
+
+# --- Script 3: Design-Around Analysis ---
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  [3/4] verify_design_desert.py"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+if python3 "$SCRIPT_DIR/verify_design_desert.py"; then
+    PASS=$((PASS + 1))
+else
+    FAIL=$((FAIL + 1))
+fi
+
+# --- Script 4: Physics Computation ---
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "  [4/4] compute_cartesian_stiffness.py"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+if python3 "$SCRIPT_DIR/compute_cartesian_stiffness.py"; then
+    PASS=$((PASS + 1))
+else
+    FAIL=$((FAIL + 1))
+fi
+
+# --- Summary ---
+echo ""
+echo "============================================================"
+echo "  VERIFICATION SUITE COMPLETE"
+echo "============================================================"
+echo ""
+echo "  Passed: $PASS / $((PASS + FAIL))"
+echo "  Failed: $FAIL / $((PASS + FAIL))"
+echo ""
+
+if [ $FAIL -eq 0 ]; then
+    echo "  ✅ ALL VERIFICATIONS PASSED"
+else
+    echo "  ❌ SOME VERIFICATIONS FAILED — Review output above"
+fi
 
 echo ""
-echo "Running verification 2/4: Chaos Cliff (41 FEA cases)..."
-echo "─────────────────────────────────────────────────────────────────────────"
-python3 "$SCRIPT_DIR/verify_chaos_cliff.py"
-
-echo ""
-echo "Running verification 3/4: Design Desert (237 FEA cases)..."
-echo "─────────────────────────────────────────────────────────────────────────"
-python3 "$SCRIPT_DIR/verify_design_desert.py"
-
-echo ""
-echo "Running verification 4/4: Cartesian Stiffness (Physics Computation)..."
-echo "─────────────────────────────────────────────────────────────────────────"
-python3 "$SCRIPT_DIR/compute_cartesian_stiffness.py"
-
-echo ""
-echo "╔══════════════════════════════════════════════════════════════════════╗"
-echo "║                     ALL VERIFICATIONS COMPLETE                       ║"
-echo "╚══════════════════════════════════════════════════════════════════════╝"
-echo ""
-echo "Summary:"
-echo "  ✅ [1/4] k_azi has no effect on rectangular substrates (30 FEA cases)"
-echo "  ✅ [2/4] Chaos cliff exists at k_azi 0.7-1.15 (41 FEA cases)"
-echo "  ✅ [3/4] All design-around paths are blocked (237 FEA cases)"
-echo "  ✅ [4/4] Cartesian Stiffness computed from Kirchhoff-Love theory"
-echo ""
-echo "Total FEA cases verified: 308"
-echo "All data traces to auditable Inductiva Cloud HPC task IDs."
-echo ""
-echo "This repository proves the PROBLEM. The SOLUTION is available under NDA."
+echo "============================================================"
 echo ""
