@@ -1,0 +1,30 @@
+{
+  "copper_tsv": {
+    "name": "Copper TSV",
+    "delta_epsilon_p": 6.786272189349113e-07,
+    "cycles_to_failure": 10530393709,
+    "margin": 1053039.4,
+    "status": "PASS"
+  },
+  "sac305_solder": {
+    "name": "SAC305 Solder",
+    "delta_epsilon_p": 1.2724260355029584e-06,
+    "cycles_to_failure": 8216038502253,
+    "margin": 821603850.2,
+    "status": "PASS"
+  },
+  "underfill_fillet": {
+    "name": "Underfill Fillet",
+    "delta_epsilon_p": 3.817278106508875e-07,
+    "cycles_to_failure": 274506345687,
+    "margin": 27450634.6,
+    "status": "PASS"
+  },
+  "glass_interface": {
+    "name": "Glass-Metal Interface",
+    "delta_epsilon_p": 8.482840236686392e-08,
+    "cycles_to_failure": 1508852479004582,
+    "margin": 150885247900.5,
+    "status": "PASS"
+  }
+}

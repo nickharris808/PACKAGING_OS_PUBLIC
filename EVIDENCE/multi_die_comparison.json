@@ -1,0 +1,32 @@
+[
+  {
+    "config": "3 HBM (Current)",
+    "n_hbm": 3,
+    "samples": 64,
+    "passes": 0,
+    "fails": 64,
+    "pass_rate_pct": 0.0,
+    "warpage_min": 1435.06,
+    "warpage_max": 12300.96
+  },
+  {
+    "config": "5 HBM (Near-term)",
+    "n_hbm": 5,
+    "samples": 64,
+    "passes": 0,
+    "fails": 64,
+    "pass_rate_pct": 0.0,
+    "warpage_min": 3743.01,
+    "warpage_max": 17895.45
+  },
+  {
+    "config": "8 HBM (Future)",
+    "n_hbm": 8,
+    "samples": 64,
+    "passes": 0,
+    "fails": 64,
+    "pass_rate_pct": 0.0,
+    "warpage_min": 4520.37,
+    "warpage_max": 26521.2
+  }
+]
