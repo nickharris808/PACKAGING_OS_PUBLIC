@@ -1,64 +1,41 @@
 {
-  "certification_date": "2026-02-09",
-  "monte_carlo": {
-    "iterations": 1000,
-    "yield_percent": 100.0,
-    "cpk": 33.32,
-    "mean_nm": 71.77,
-    "std_nm": 4.28,
-    "grade": "A+ (Six Sigma Quality)"
+  "title": "HONEST CERTIFICATION",
+  "generated": "2026-02-09",
+  "note": "This replaces previous toy model results",
+  
+  "data_source": {
+    "type": "Real Cloud FEM",
+    "engine": "CalculiX on Inductiva",
+    "cases_with_task_id": 645,
+    "sha256_hashes": 508
   },
-  "sobol": {
-    "evaluations": 3072,
-    "top_drivers": [
-      "die_power_W",
-      "alpha_ppmK",
-      "K_ratio"
-    ],
-    "total_indices": {
-      "h_mm": 0.0789,
-      "E_GPa": 0.0145,
-      "alpha_ppmK": 0.2194,
-      "die_power_W": 0.4996,
-      "K_ratio": 0.1908
+  
+  "key_findings": {
+    "chaos_cliff": {
+      "description": "k_azi 0.7-1.15 is danger zone",
+      "k_azi_0.1_mean_nm": 276,
+      "k_azi_1.0_mean_nm": 6454,
+      "improvement_factor": 23.4,
+      "variance_reduction": 50.5
+    },
+    "rectangular_immunity": {
+      "description": "k_azi has ZERO effect on rectangles",
+      "cases_tested": 30,
+      "k_azi_values": [0.3, 0.5, 0.7, 0.9, 1.0],
+      "result": "All identical warpage 24-44nm"
     }
   },
-  "tolerance_cliff": {
-    "parameters_tested": [
-      "h_mm",
-      "E_GPa",
-      "alpha_ppmK",
-      "die_power_W",
-      "K_ratio"
-    ],
-    "cliffs_found": 0,
-    "verdict": "NO_CLIFFS_FOUND"
+  
+  "yield_at_specs": {
+    "30um_cowos": {"yield_pct": 99.5, "cpk": 3.35},
+    "10um": {"yield_pct": 98.4},
+    "1um": {"yield_pct": 70.7}
   },
-  "multi_material": {
-    "materials_tested": [
-      "Si",
-      "SiC",
-      "GaN",
-      "InP",
-      "AlN",
-      "Glass_EN_A1"
-    ],
-    "all_passed": true
-  },
-  "multi_die": {
-    "die_counts_tested": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      8,
-      10,
-      12
-    ],
-    "all_passed": true
-  },
-  "total_new_simulations": 4352,
-  "certification_verdict": "S-TIER"
+  
+  "value_proposition": {
+    "warpage_reduction": "23x at optimal k_azi",
+    "variance_reduction": "50x at optimal k_azi",
+    "yield_improvement": "3x at tight specs",
+    "competitor_blocking": "Azimuthal fails on panels"
+  }
 }

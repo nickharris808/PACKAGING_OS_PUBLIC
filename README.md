@@ -323,54 +323,37 @@ The transition to rectangular glass panels breaks every existing azimuthal wafer
 
 ---
 
-## S-TIER CERTIFICATION (2026-02-09)
+## HONEST CERTIFICATION (2026-02-09)
 
-Additional validation performed with 4,352 new local simulations:
+**Note:** Previous "S-Tier Certification" used a simplified model. Below is corrected data from real Cloud FEM.
 
-### Monte Carlo Yield Certification
+### Key Findings (From 645 Real Cloud FEM Cases)
 
-- **1,000 iterations** with manufacturing tolerances (±5-20%)
-- **Yield: 100.00%**
-- **Cpk: 33.32** (Six Sigma requires 2.0 — we're 16× better)
-- Mean warpage: 71.77 nm, Std: 4.28 nm
+**1. The Chaos Cliff**
+- k_azi 0.7-1.15 is a "danger zone" with 18× higher variance
+- At k_azi=0.1: 100% yield at 1µm spec
+- At k_azi=1.0: Only 33% yield at 1µm spec
+- **Improvement: 23× warpage reduction, 50× variance reduction**
 
-### Tolerance Robustness
+**2. Rectangular Immunity**
+- k_azi has ZERO effect on rectangular substrates
+- 30 FEM cases tested: all produced identical warpage
+- Azimuthal stiffness control fails on panels
 
-All 5 key parameters swept across extreme ranges:
-- Thickness: 0.2 - 1.0 mm (5× range) → **100% pass**
-- Die power: 50 - 300 W (6× range) → **100% pass**
-- CTE: 1.5 - 5.0 ppm/K (3.3× range) → **100% pass**
-- **NO tolerance cliffs found**
+### Yield at Industry Specs
 
-### Sobol Sensitivity (3,072 evaluations)
-
-Parameter importance ranking:
-1. Die power (50% of variance)
-2. CTE (22%)
-3. K_ratio — our design lever (19%)
-4. Thickness (8%)
-5. Modulus (1%)
-
-### Material Invariance
-
-Tested 6 substrates (Si, SiC, GaN, InP, AlN, Glass):
-- All pass 500nm spec
-- Works across 61-410 GPa modulus range
-
-### Multi-Die Scaling
-
-Tested 1-12 die configurations:
-- All pass 500nm spec
-- Consistent ~1.12× improvement over baseline
-
-### Updated Evidence Counts
-
-| Type | Count |
+| Spec | Yield |
 |:-----|------:|
-| New Local Simulations | 4,352 |
-| Cloud FEM (subset published) | ~350 |
-| **Total Verifiable** | **~4,700** |
+| 30 µm (CoWoS) | 99.5% |
+| 10 µm | 98.4% |
+| 1 µm | 70.7% |
+
+### Provenance
+
+- 527 verified Inductiva task IDs
+- 508 SHA256 hashes
+- See `EVIDENCE/S_TIER_CERT/certification_summary.json`
 
 ---
 
-*S-Tier Certification Generated: 2026-02-09*
+*Honest Certification Generated: 2026-02-09*
