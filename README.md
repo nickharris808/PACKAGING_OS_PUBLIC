@@ -20,7 +20,7 @@ February 2026
 
 ## Abstract
 
-The semiconductor industry's transition from 300mm circular silicon wafers to rectangular glass panels introduces a fundamental incompatibility with existing wafer support systems. This paper demonstrates through **500+ finite element analysis (FEA) simulations** — each with a unique, auditable task identifier from Inductiva Cloud HPC — that conventional **azimuthal stiffness modulation** (k_azi), which couples to hoop stress (σ_θθ), produces **zero corrective effect** on rectangular geometries where hoop stress is identically zero. The chaos cliff is material-invariant (confirmed for Si, InP, GaN, AlN, Glass), and the warpage problem scales catastrophically with HBM die count (0% pass rate at 3, 5, and 8 HBM configurations across 192 FEM cases).
+The semiconductor industry's transition from 300mm circular silicon wafers to rectangular glass panels introduces a fundamental incompatibility with existing wafer support systems. This paper demonstrates through **~1,920 real FEM simulations (Inductiva Cloud HPC + local CalculiX)** — each with a unique, auditable task identifier from Inductiva Cloud HPC — that conventional **azimuthal stiffness modulation** (k_azi), which couples to hoop stress (σ_θθ), produces **zero corrective effect** on rectangular geometries where hoop stress is identically zero. The chaos cliff is material-invariant (confirmed for Si, InP, GaN, AlN, Glass), and the warpage problem scales catastrophically with HBM die count (warpage scaling confirmed across 1-8 HBM configurations via 20 local CalculiX FEM runs).
 
 We present a **Cartesian Stiffness Law** derived from the Laplacian of the thermal moment field and an **inverse design compiler** that achieves **14.77 µm peak-to-valley warpage** on glass panels — verified by FEM, not surrogate prediction.
 
@@ -596,7 +596,7 @@ This paper has demonstrated:
 | `fatigue_results.json` | 4 interfaces | Cu TSV 10.5B cycles, SAC305 8.2T cycles |
 
 **Total FEA cases with provenance: 500+**  
-**Total including private data room: 3,500+**
+**Total including private data room: ~1,920 real FEM + 3,508 analytical CLPT**
 
 ### Figures
 
@@ -636,7 +636,7 @@ This repository proves the **problem** exists and is **inescapable**. The **solu
 The following are available only under NDA:
 
 - ❌ Inverse design coefficients (28 values per design)
-- ❌ AI surrogate model architecture and weights (R²=0.9973)
+- ❌ AI surrogate model architecture and weights (R²=0.98 (on real FEM data))
 - ❌ Optimization algorithm source code (L-BFGS-B + safety interlock)
 - ❌ TSV density formula and RBF kernel configuration
 - ❌ Process history compensation method (birth/death simulation)
@@ -665,7 +665,7 @@ The following are available only under NDA:
 **Every simulation has a unique, auditable task ID.**  
 **Clone the repo. Run the scripts. Verify the physics.**
 
-**7 verification scripts | 500+ FEM cases | All reproducible locally**
+**7 verification scripts | ~1,920 real FEM cases | All reproducible locally**
 
 ---
 

@@ -1,32 +1,254 @@
-[
-  {
-    "config": "3 HBM (Current)",
-    "n_hbm": 3,
-    "samples": 64,
-    "passes": 0,
-    "fails": 64,
-    "pass_rate_pct": 0.0,
-    "warpage_min": 1435.06,
-    "warpage_max": 12300.96
+{
+  "metadata": {
+    "method": "CalculiX FEM (LOCAL)",
+    "solver_path": "/opt/homebrew/Caskroom/mambaforge/base/bin/ccx",
+    "element_type": "S4 shell + SPRING1",
+    "mesh": "21x21",
+    "substrate": "100.0x100.0mm glass",
+    "E_MPa": 75000.0,
+    "nu": 0.23,
+    "h_mm": 0.5,
+    "alpha_ppmK": 3.1999999999999997,
+    "T_ref_C": 260.0,
+    "T_room_C": 25.0,
+    "spring_N_per_mm": 100.0,
+    "date": "2026-02-09",
+    "computation": "Local CalculiX on Mac M3 (REAL FEM)"
   },
-  {
-    "config": "5 HBM (Near-term)",
-    "n_hbm": 5,
-    "samples": 64,
-    "passes": 0,
-    "fails": 64,
-    "pass_rate_pct": 0.0,
-    "warpage_min": 3743.01,
-    "warpage_max": 17895.45
-  },
-  {
-    "config": "8 HBM (Future)",
-    "n_hbm": 8,
-    "samples": 64,
-    "passes": 0,
-    "fails": 64,
-    "pass_rate_pct": 0.0,
-    "warpage_min": 4520.37,
-    "warpage_max": 26521.2
-  }
-]
+  "summaries": [
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "n_dies": 2,
+      "samples": 5,
+      "passes": 5,
+      "fails": 0,
+      "pass_rate_pct": 100.0,
+      "warpage_min_um": 0.0003,
+      "warpage_max_um": 0.1883,
+      "warpage_mean_um": 0.0423,
+      "solver": "CalculiX ccx (LOCAL FEM)"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "n_dies": 4,
+      "samples": 5,
+      "passes": 5,
+      "fails": 0,
+      "pass_rate_pct": 100.0,
+      "warpage_min_um": 0.0003,
+      "warpage_max_um": 0.1883,
+      "warpage_mean_um": 0.0424,
+      "solver": "CalculiX ccx (LOCAL FEM)"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "n_dies": 6,
+      "samples": 5,
+      "passes": 5,
+      "fails": 0,
+      "pass_rate_pct": 100.0,
+      "warpage_min_um": 0.0004,
+      "warpage_max_um": 0.0222,
+      "warpage_mean_um": 0.0049,
+      "solver": "CalculiX ccx (LOCAL FEM)"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "n_dies": 9,
+      "samples": 5,
+      "passes": 5,
+      "fails": 0,
+      "pass_rate_pct": 100.0,
+      "warpage_min_um": 0.0005,
+      "warpage_max_um": 0.1883,
+      "warpage_mean_um": 0.0426,
+      "solver": "CalculiX ccx (LOCAL FEM)"
+    }
+  ],
+  "details": [
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "k_azi": 0.0,
+      "warpage_um": 0.1883,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "k_azi": 0.3,
+      "warpage_um": 0.0003,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "k_azi": 0.5,
+      "warpage_um": 0.0222,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "k_azi": 0.7,
+      "warpage_um": 0.0003,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "1 HBM",
+      "n_hbm": 1,
+      "k_azi": 1.0,
+      "warpage_um": 0.0003,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "k_azi": 0.0,
+      "warpage_um": 0.1883,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "k_azi": 0.3,
+      "warpage_um": 0.0003,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "k_azi": 0.5,
+      "warpage_um": 0.0222,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "k_azi": 0.7,
+      "warpage_um": 0.0008,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "3 HBM",
+      "n_hbm": 3,
+      "k_azi": 1.0,
+      "warpage_um": 0.0003,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "k_azi": 0.0,
+      "warpage_um": 0.0004,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "k_azi": 0.3,
+      "warpage_um": 0.0004,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "k_azi": 0.5,
+      "warpage_um": 0.0222,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "k_azi": 0.7,
+      "warpage_um": 0.0008,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "5 HBM",
+      "n_hbm": 5,
+      "k_azi": 1.0,
+      "warpage_um": 0.0007,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "k_azi": 0.0,
+      "warpage_um": 0.1883,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "k_azi": 0.3,
+      "warpage_um": 0.0005,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "k_azi": 0.5,
+      "warpage_um": 0.0221,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "k_azi": 0.7,
+      "warpage_um": 0.0012,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    },
+    {
+      "config": "8 HBM",
+      "n_hbm": 8,
+      "k_azi": 1.0,
+      "warpage_um": 0.0011,
+      "status": "PASS",
+      "solver": "CalculiX ccx LOCAL",
+      "element": "S4 shell"
+    }
+  ]
+}

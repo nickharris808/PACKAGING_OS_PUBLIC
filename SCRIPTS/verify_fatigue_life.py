@@ -30,7 +30,8 @@ print("FATIGUE LIFE VERIFICATION")
 print("=" * 70)
 
 with open(DATA_FILE) as f:
-    data = json.load(f)
+    raw = json.load(f)
+    data = raw.get("results", raw)  # Handle nested or flat format
 
 print(f"\nLoaded {DATA_FILE}")
 print(f"Interfaces tested: {len(data)}")
